@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Review</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/company/add-company">Add a Company</a></li>
+          <li><a href="/company/add-review">Add a Review</a></li>
+          <li><a href="/company/search">Search for a Company</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Add a Review</h1>
+    <form action="/company/add-review" method="POST">
+      <label for="companyName">Company Name:</label>
+      <input
+        type="text"
+        id="companyName"
+        name="name"
+        placeholder="Enter company name"
+        required
+      />
+
+      <label for="pros">Pros:</label>
+      <textarea name="pros" id="pros" rows="4" required></textarea>
+
+      <label for="cons">Cons:</label>
+      <textarea name="cons" id="cons" rows="4" required></textarea>
+
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating">
+        <option value="1">1 star</option>
+        <option value="2">2 stars</option>
+        <option value="3">3 stars</option>
+        <option value="4">4 stars</option>
+        <option value="5">5 stars</option>
+      </select>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </body>
+</html>

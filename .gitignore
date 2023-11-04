@@ -1,0 +1,13 @@
+/node_modules
+/migrations
+/package.json
+/package-lock.json
+/uploads
+*.log
+
+.vscode/
+.idea/
+.DS_Store
+
+.env
+

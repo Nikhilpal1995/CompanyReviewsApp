@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Details</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <h1>Company Details</h1>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/company/add-company">Add a Company</a></li>
+        <li><a href="/company/add-review">Add a Review</a></li>
+        <li><a href="/company/search">Search for a Company</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="company-details">
+    <h2><%= company.name %></h2>
+    <h3>Reviews</h3>
+    <ul>
+      <% if (company.Reviews && company.Reviews.length > 0) { %>
+        <% company.Reviews.forEach((review) => { %>
+          <li>
+            <h4>Pros</h4>
+            <p><%= review.pros %></p>
+            <h4>Cons</h4>
+            <p><%= review.cons %></p>
+            <h4>Rating</h4>
+            <p><%= review.rating %> stars</p>
+          </li>
+        <% }); %>
+      <% } else { %>
+        <li>No reviews available for this company.</li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>
